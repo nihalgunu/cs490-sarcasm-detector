@@ -138,7 +138,7 @@ if __name__ == "__main__":
     is_testing = os.environ.get("GS_TESTING", "0") == "1"
     checkpoint_path = "checkpoint.pt"
     if is_testing:
-        model.load_state_dict(torch.load(checkpoint_path, map_location=device))
+        model.load_state_dict(torch.load(checkpoint_path, map_location=device, weights_only=True))
         model.to(device)
     else:
         print("Starting Training...")
@@ -152,3 +152,7 @@ if __name__ == "__main__":
 
         torch.save(model.state_dict(), checkpoint_path)
         print(f"Model checkpoint saved to {checkpoint_path}")
+
+    """
+        YOUR ADDITIONAL CODE BELOW (DO NOT DELETE THIS COMMENT)
+    """
