@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+hw2_env/
+
+# Large model checkpoint (438MB)
+checkpoint.pt
+
+# Data files (if needed)
+# train.jsonl
+# valid.jsonl
